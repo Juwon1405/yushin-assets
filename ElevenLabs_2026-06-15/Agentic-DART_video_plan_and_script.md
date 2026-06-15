@@ -1,0 +1,17 @@
+[clears throat] Hello. The tool I'd like to introduce today is Agentic-DART. [thoughtful] In one sentence: Agentic-DART is an autonomous forensic agent. The language model analyzes D-F-I-R evidence in read-only mode, and seals every inference into an immutable hash chain — specifically, an S-H-A two-fifty-six audit chain. [short pause]
+
+
+
+But to really understand why this matters, look at how AI is entering security work today. [short pause] Most AI security tools share the same shape — a well-crafted prompt, a context harness. You push logs in, and a plausible report comes out. The problem is, it stops there. The model reasons only within the context it was handed. It never checks the real evidence… it just continues the pattern of the text it received. That is where hallucination creeps in. The report reads smoothly, but no one can guarantee that each line is actually grounded in evidence. [short pause] In other words, AI so far has only imitated the LAST five percent of an analyst's job — writing the report. But the essence of incident response lives in the other NINETY-FIVE percent. Forming a hypothesis. Verifying it directly with tools. Moving to the next. And sometimes… throwing the whole hypothesis away. [thoughtful] Agentic-DART makes the language model do exactly that — autonomously.
+
+
+
+So the natural question is — if the agent runs autonomously, won't it damage the evidence? [short pause] We did not solve this by writing "do not modify evidence" into a system prompt. Instead, the functions that could modify or delete evidence simply do not exist in the tool registry. Shell execution, file writes, deletion — six destructive operations — are checked by name, by C-I, on every single commit. [serious] Even if a prompt injection or a jailbreak fully succeeds, there is no destructive function for the agent to call.
+
+
+
+[thoughtful] Now let me show you what that looks like in practice. [short pause] Here, Agentic-DART is handed a real disk image — nothing but raw evidence, no answer key. Watch how it works. It forms a hypothesis about what happened, and reaches for a tool to test that hypothesis against the actual artifacts. [short pause] And here — this is the moment that matters. The evidence does not support its first theory… so it drops that line and pivots, on its own. No human in the loop. [serious] When it finishes, every finding is sealed into the S-H-A two-fifty-six chain — and any line of the report can be traced back to the exact tool execution that produced it. Across the benchmark, not a single hallucinated finding survived that check.
+
+
+
+[thoughtful] Let me close with something honest. Building this taught me that without real D-F-I-R and engineering knowledge, you simply cannot design an agent like this — and you cannot catch the moments where the AI quietly gets it wrong. There was a lot of hallucinated code… a lot of refactoring… a lot of going back to the fundamentals. And for that, I'm grateful. [short pause] Thank you to SANS and the Find Evil team — this event sent me back to the roots, and made this project better than I could have made it alone. [serious] Agentic-DART is not a report generator. It performs the analysis itself, and seals the entire process into an audit chain that cannot be forged. [short pause] Analysis speed is security. Thank you for watching.
